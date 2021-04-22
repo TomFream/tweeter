@@ -1,0 +1,11 @@
+header {
+  display: flex;
+  margin-top: 120px;
+  height: 400px;
+  width: auto;
+  background-color: goldenrod;  
+  background-image: url(http://www.transparenttextures.com/patterns/arches.png);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

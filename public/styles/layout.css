@@ -18,8 +18,77 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  font-family: 'Source Sans Pro', sans-serif;
+  /* align-items: center; */
+  flex-direction: column;
 }
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+.container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  height: 500px;
+  background-color: #f4f1ec; 
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
+  align-items: flex-start;
+ }
+
+ .tweet {
+   display: flex;
+   flex-direction: column;
+   border-style: solid;
+   border-width: medium;
+   width: 100%;
+   height: max-content;
+   padding-right: 2%;
+   padding-left: 2%;
+   margin: 1rem;
+ }
+
+ .tweet-header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
+
+ .name-avatar {
+   display: flex;
+   align-items: center;
+ }
+
+ .tweet-body {
+   display: flex;
+   border-bottom:solid;
+   padding-bottom: 2rem;
+   margin-bottom: 0;
+ }
+
+ .tweet-footer {
+   display: flex;
+   align-items: baseline;
+   justify-content: space-between;
+ }
+
+.logos {
+  color: #4056A1;
+}
+
+.fas:hover {
+  color: goldenrod;
+}
+
+#tweet-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
