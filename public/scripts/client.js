@@ -5,8 +5,8 @@
  */
 
 $(document).ready(function () {
-  timeago.render(document.querySelectorAll('.need_to_be_rendered'));
-  
+ 
+
   function createTweetElement(tweetObj) {
     const $tweet = $(`<article class="tweet"></article>`);
 
@@ -34,7 +34,7 @@ $(document).ready(function () {
 
     const footer = `
     <footer class="tweet-footer">
-      <p class="need_to_be_rendered" datetime="${escape(tweetObj.created_at)}"></p>
+      <p>${timeago.format(tweetObj.created_at)}</p>
       <div class="logos">
         <i class="fas fa-flag"></i>
         <i class="fas fa-heart"></i>
@@ -63,7 +63,15 @@ $("form").submit(function(event) {
   let characterCount = $("#tweet-text").val().length;
 
   if (characterCount === 0 || characterCount > 140) {
-    return alert("Tweet empty or too long")
+    $("#tweet-error").empty();
+    characterCount === 0 ? $("#tweet-error").append(`Too short: Input cannot be empty!`) : $("#tweet-error").append(`Too long: Character limit 140!`)
+    $("#tweet-error").slideDown();
+    
+    setTimeout(() => {
+      $("#tweet-error").slideUp();
+    },5000);
+    
+    return
   }
   serialized = $(this).serialize();
 
@@ -72,13 +80,13 @@ $("form").submit(function(event) {
     // console.log('Success: ', tweets);
     $("#tweet-text").val("")
     $("#tweet-container").empty();
+    $(".counter").val("140") 
   })
   .then(function() {
     loadTweets();
   });
 
   console.log("Serialized data: ", serialized);
-  timeago.render(document.querySelectorAll('.need_to_be_rendered'));
   
 });
 
@@ -92,6 +100,4 @@ function loadTweets() {
 }
 loadTweets();
 // renderTweets(loadTweets());
-// Timeago rendering
-// timeago.render(document.querySelectorAll('.need_to_be_rendered'));
 });

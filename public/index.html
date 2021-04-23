@@ -56,7 +56,7 @@
     <main class="container">
       <section class="new-tweet">
         <!-- <h2>Compose Tweet</h2> -->
-        <p hidden class="input-error">Input error</p>
+        <p id="tweet-error">Test error</p>
         <form action="/tweets" method="POST">
           <!-- <label for="tweet-text">What are you humming about?</label> -->
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?" ></textarea>
@@ -66,20 +66,7 @@
           </div>
         </form>
       </section>
-      <article class="tweet">
-        <div class="tweet-header">
-          <h2>Orphus</h2>
-          <h3>@OrphusGorn</h3>
-        </div>
-        <p class="tweet-body">If chimps knew how to armbar there'd be none in zoos!</p>
-        <footer class="tweet-footer">
-          <p class="need_to_be_rendered" datetime="1619126992776"></p>
-          <div class="logos">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-retweet"></i>
-          </div>
-        </footer>
+      
       </article>
       <div id="tweet-container">
         
