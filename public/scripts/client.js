@@ -5,6 +5,7 @@
  */
 
 $(document).ready(function() {
+
   $("form").submit(function(event) {
     event.preventDefault();
     let characterCount = $("#tweet-text").val().length;
@@ -39,7 +40,8 @@ $(document).ready(function() {
 
 const createTweetElement = function(tweetObj) {
   const $tweet = $(`<article class="tweet"></article>`);
-
+  const $tweetDiv = $(`<div class='article-div'></div>`); 
+  
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -55,10 +57,13 @@ const createTweetElement = function(tweetObj) {
     <h3>${escape(tweetObj.user.handle)}</h3>
   </div>
   `;
-  $tweet.append(header);
+  
+  // $tweet.append(header);
+  $tweetDiv.append(header)
 
   const body = `<p class="tweet-body">${escape(tweetObj.content.text)}</p>`;
-  $tweet.append(body);
+  // $tweet.append(body);
+  $tweetDiv.append(body);
 
   const footer = `
   <footer class="tweet-footer">
@@ -70,8 +75,10 @@ const createTweetElement = function(tweetObj) {
     </div>
   </footer>
   `;
-  $tweet.append(footer);
-  
+  // $tweet.append(footer);
+  $tweetDiv.append(footer);
+
+  $tweet.append($tweetDiv)
   return $tweet;
 };
 

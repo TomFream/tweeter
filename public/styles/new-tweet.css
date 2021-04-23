@@ -3,8 +3,6 @@
   flex-direction: column;
   justify-content: space-around;
   height: auto;
-  /* width: 50%; */
-  /* margin: auto; */
   min-width: 100%;
   background-color:#f4f1ec;  
   padding: 5%;
@@ -44,7 +42,6 @@
   font-family: 'Bungee', cursive;
   color: red;
 }
-
 
 .tweet-buttons {
   display: flex;

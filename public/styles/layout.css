@@ -20,9 +20,7 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   justify-items: space-between;
-  /* align-items: center; */
   font-family: 'Source Sans Pro', sans-serif;
-  /* align-items: center; */
   flex-direction: row;
 }
 
@@ -46,7 +44,6 @@ body {
     height: 500px;
     background-color: #f4f1ec;
     flex-direction: column;
-    /* flex-wrap: nowrap; */
     flex-grow: 2;
     align-items: flex-start;
   }
@@ -55,7 +52,6 @@ body {
 
 .container {
   display: flex;
-  /* width: 90%; */
   margin-top: 190px;
   padding-left: 90px;
   height: 500px;
@@ -71,8 +67,6 @@ body {
   color: red;
   justify-items: center;
   align-items: center;
-  /* background-color: transparent; */
-
  }
 
  .tweet {
@@ -86,9 +80,9 @@ body {
    padding-left: 2%;
    margin: 1rem;
  }
- .tweet :hover {
+ .article-div:hover {
    box-shadow: 0 8px 6px -6px black;
- }
+ } 
 
  .tweet-header {
    display: flex;
