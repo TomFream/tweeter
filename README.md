@@ -6,8 +6,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["screenshot Tweeter homepage"]()
-!["screenshot Tweeter homepage in narrow window"]()
+!["screenshot Tweeter homepage"](https://github.com/TomFream/tweeter/blob/master/public/images/tweeter-homepage.png?raw=true)
+!["screenshot Tweeter homepage in narrow window"](https://github.com/TomFream/tweeter/blob/master/public/images/tweeter-narrow-viewport.png?raw=true)
 
 ## Getting Started
 
